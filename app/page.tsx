@@ -2,6 +2,7 @@
 
 import Resume from '@/components/Resume'
 import Navbar from '@/components/Navbar'
+import About from '@/components/About'
 
 import {
     Palette,
@@ -95,108 +96,38 @@ export default function Portfolio() {
 
     return (
         <div
-            className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300"} relative overflow-hidden`}
+            className={`flex justify-center items-center w-full ${isDarkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300"} relative overflow-hidden`}
         >
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-20">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-indigo-200/30 transform -skew-y-12"></div>
-                <div className="absolute inset-0 bg-gradient-to-tl from-purple-200/20 via-transparent to-cyan-100/20 transform skew-y-12"></div>
-            </div>
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-indigo-200/30 transform -skew-y-12"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tl from-purple-200/20 via-transparent to-cyan-100/20 transform skew-y-12"></div>
+                </div>
+            <div
+                className={`min-h-screen max-w-[1650px]   relative overflow-hidden`}
+            >
 
-            <div className="relative z-10 flex min-h-screen">
-                {/* Left Sidebar - Profile Card */}
-                < Resume />
+                <div className="relative z-10 flex min-h-screen">
+                    {/* Left Sidebar - Profile Card */}
+                    < Resume />
 
-                {/* Main Content */}
-                <div className="flex-1 p-6 px-0">
-                    <div
-                        className={`p-8 h-full bg-white/10 ${isDarkMode ? "bg-gray-800/30" : ""} backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl px-6 py-6`}
-                    >
-                        {/* About Section */}
-                        <div className="mb-8">
-                            <div className="flex items-center gap-3 mb-6">
-                                <h2 className={`text-3xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>About</h2>
-                                <div className="flex-1 border-t-2 border-dashed border-blue-600 rounded-full h-0.5"></div>
-                            </div>
-
-                            <div className={`space-y-4 leading-relaxed ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
-                                <p>
-                                    I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print
-                                    media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
-                                </p>
-                                <p>
-                                    My aim is to bring across your message and identity in the most creative way. I created web design for
-                                    many famous brand companies.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* What I Do Section */}
-                        <div>
-                            <div className="flex items-center gap-3 mb-6">
-                                <h2 className={`text-3xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>What I Do!</h2>
-                                <div className="flex-1 border-t-2 border-dashed border-blue-600 rounded-full h-1"></div>
-                            </div>
-
-                            <div className="grid grid-cols-2 gap-6">
-                                {/* UI/UX Design */}
-                                <div className="p-6 bg-purple-100/45 backdrop-blur-lg border border-purple-300/60 rounded-xl hover:bg-purple-100/55 transition-colors shadow-md shadow-purple-100/30">
-                                    <div className="w-12 h-12 bg-purple-200/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                                        <Palette className="w-6 h-6 text-purple-700" />
-                                    </div>
-                                    <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                                        UI/Ux Design
-                                    </h3>
-                                    <p className={`leading-relaxed ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam euismod tincidunt volutpat.
-                                    </p>
-                                </div>
-
-                                {/* App Development */}
-                                <div className="p-6 bg-orange-100/40 backdrop-blur-lg border border-orange-300/50 rounded-xl hover:bg-orange-100/50 transition-colors">
-                                    <div className="w-12 h-12 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 bg-[rgba(255,215,168,0.09)]">
-                                        <Smartphone className="w-6 h-6 text-orange-700" />
-                                    </div>
-                                    <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                                        App Development
-                                    </h3>
-                                    <p className={`leading-relaxed ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam euismod tincidunt volutpat.
-                                    </p>
-                                </div>
-
-                                {/* Photography */}
-                                <div className="p-6 bg-pink-100/40 backdrop-blur-lg border border-pink-300/50 rounded-xl hover:bg-pink-100/50 transition-colors">
-                                    <div className="w-12 h-12 bg-pink-200/95 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                                        <Camera className="w-6 h-6 text-pink-700" />
-                                    </div>
-                                    <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                                        Photography
-                                    </h3>
-                                    <p className={`leading-relaxed ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam euismod tincidunt volutpat.
-                                    </p>
-                                </div>
-
-                                {/* Web Development */}
-                                <div className="p-6 bg-blue-100/40 backdrop-blur-lg border border-blue-300/50 rounded-xl hover:bg-blue-100/50 transition-colors">
-                                    <div className="w-12 h-12 bg-blue-200/95 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                                        <Code className="w-6 h-6 text-blue-700" />
-                                    </div>
-                                    <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                                        Web Development
-                                    </h3>
-                                    <p className={`leading-relaxed ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam euismod tincidunt volutpat.
-                                    </p>
-                                </div>
+                    {/* Main Content */}
+                    <div className="flex-1 p-6 px-0">
+                        <div
+                            className={`p-6 h-fit bg-white/10 ${isDarkMode ? "bg-gray-800/30" : ""} backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl`}
+                        >
+                            <div
+                                className={`p-4 h-fit bg-white/10 ${isDarkMode ? "bg-gray-800/30" : ""} backdrop-blur-xl border border-white/20 rounded-2xl`}
+                            >
+                                {/* About Section */}
+                                <About isDarkMode={isDarkMode} />
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Right Sidebar - Navigation */}
-                <Navbar activeSection={activeSection} handleNavigation={handleNavigation} isDarkMode={isDarkMode} toggleTheme={toggleTheme} isAnimating={isAnimating} buttonRef={buttonRef} />
+                    {/* Right Sidebar - Navigation */}
+                    <Navbar activeSection={activeSection} handleNavigation={handleNavigation} isDarkMode={isDarkMode} toggleTheme={toggleTheme} isAnimating={isAnimating} buttonRef={buttonRef} />
+                </div>
             </div>
         </div>
     )

@@ -5,17 +5,17 @@ import { Calendar, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter, 
 import React from 'react';
 
 const Resume: React.FC = () => {
-    const { isDarkMode, toggleTheme, isAnimating, buttonRef } = useDarkTheme();
+    const { isDarkMode } = useDarkTheme();
     return (
         <div className="w-80 p-6">
             <div
-                className={`p-6 bg-white/10 ${isDarkMode ? "bg-gray-800/30" : ""} backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl h-max`}
+                className={`p-6 bg-white/10 ${isDarkMode ? "bg-gray-800/30" : ""} backdrop-blur-xl border border-white/20 rounded-2xl h-max`}
             >
                 {/* Profile Image */}
                 <div className="flex mb-6 justify-center w-full h-full">
                     <div className="w-full aspect-square rounded-2xl overflow-hidden bg-slate-600 flex items-center justify-center">
                         <img
-                            src="/professional-headshot-man-in-blue-blazer.png"
+                            // src="/images/Profile-Img.jpg"
                             alt="Profile"
                             className="w-full h-full object-cover"
                             loading="eager"
@@ -31,7 +31,7 @@ const Resume: React.FC = () => {
                 {/* Name and Title */}
                 <div className="text-center mb-6">
                     <h1 className={`text-2xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                        Monalisa Ashley
+                        Komolitdinov Firdavs
                     </h1>
                     <p className={`font-medium ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>UI/UX Designer</p>
                 </div>
@@ -55,14 +55,14 @@ const Resume: React.FC = () => {
                 {/* Contact Information */}
                 <div className="space-y-4">
                     <div className="flex items-center gap-3 p-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg">
-                        <div className="w-8 h-8 bg-pink-100/80 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                            <Phone className="w-4 h-4 text-pink-600" />
+                        <div className="w-8 h-8 bg-emerald-100/80 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                            <Phone className="w-4 h-4 text-emerald-600" />
                         </div>
                         <div>
-                            <p className={`text-xs uppercase tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-500"}`}>
+                            <p className={`text-xs uppercase tracking-wide ${isDarkMode ? "text-gray-800" : "text-gray-100"}`}>
                                 Phone
                             </p>
-                            <p className={`font-medium ${isDarkMode ? "text-white" : "text-gray-900"}`}>+123 456 7890</p>
+                            <a href="tel:+998772356434" className={`font-medium ${isDarkMode ? "text-gray-900" : "text-gray-100"}`}>+998 77-235-64-34</a>
                         </div>
                     </div>
 
@@ -74,7 +74,7 @@ const Resume: React.FC = () => {
                             <p className={`text-xs uppercase tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-500"}`}>
                                 Email
                             </p>
-                            <p className={`font-medium ${isDarkMode ? "text-white" : "text-gray-900"}`}>Example@Mail.Com</p>
+                            <a href="email:firdavskomolitdinov@gmail.com" className={`font-medium ${isDarkMode ? "text-white" : "text-gray-900"}`}>Example@Mail.Com</a>
                         </div>
                     </div>
 
